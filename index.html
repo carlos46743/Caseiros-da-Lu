@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caseirinhos da Lu - Bolos, Doces e Salgados Feitos com Amor</title>
+    <meta name="description" content="Bolos caseiros, doces finos e salgados frescos da Caseirinhos da Lu. Encomende já suas delícias para festas e eventos!">
+    <meta name="keywords" content="bolos caseiros, doces, salgados, festas, eventos, encomendas, Caseirinhos da Lu, culinária caseira, quitutes">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <img src="https://raw.githubusercontent.com/carlos46743/Caseiros-da-Lu/refs/heads/main/%C3%ADcon.png" alt="Logo Caseirinhos da Lu" class="hero-logo">
+            <h1>Delícias Caseiras Feitas com Amor!</h1>
+            <p class="subtitle">Bolos, Doces e Salgados fresquinhos para todas as ocasiões.</p>
+            <a href="https://wa.me/+55(11)94666-5734?text=Olá,%20gostaria%20de%20fazer%20uma%20encomenda!" class="btn btn-primary" target="_blank">Faça seu Pedido via WhatsApp <i class="fab fa-whatsapp"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre" class="section-padded">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <div class="about-content">
+                    <img src="https://raw.githubusercontent.com/carlos46743/Caseiros-da-Lu/refs/heads/main/Cozinheira.jpg" alt="Cozinha Caseira" class="about-image">
+                    <p>A Caseirinhos da Lu nasceu da paixão por culinária e do desejo de levar o sabor da comida feita em casa para a sua mesa. Com ingredientes selecionados e muito carinho, preparamos bolos, doces e salgados que encantam o paladar e aquecem o coração. Seja para um café da tarde, uma festa de aniversário ou um evento especial, temos a opção perfeita para você!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos" class="section-padded bg-light">
+            <div class="container">
+                <h2>Nossos Produtos</h2>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="https://raw.githubusercontent.com/carlos46743/Caseiros-da-Lu/refs/heads/main/bolo%20de%20cenoura%20com%20chocolate.png" alt="Bolo de Cenoura com Cobertura de Chocolate">
+                        <h3>Bolos Caseiros</h3>
+                        <p>Variedade de bolos fresquinhos: Cenoura com chocolate, fubá, milho, chocolate e muito mais!</p>
+                        <button class="btn btn-secondary view-details" data-category="bolos">Ver Detalhes</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://raw.githubusercontent.com/carlos46743/Caseiros-da-Lu/refs/heads/main/brigadeiros.png" alt="Brigadeiros Gourmet">
+                        <h3>Doces Finos</h3>
+                        <p>Brigadeiros gourmet, beijinhos, casadinhos e outras delícias para adoçar seu dia.</p>
+                        <button class="btn btn-secondary view-details" data-category="doces">Ver Detalhes</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://raw.githubusercontent.com/carlos46743/Caseiros-da-Lu/refs/heads/main/mini%20pizza.png" alt="Mini Pizzas e Salgadinhos">
+                        <h3>Salgados Diversos</h3>
+                        <p>Coxinha, risole, mini pizza, empadinhas e a melhor variedade para sua festa!</p>
+                        <button class="btn btn-secondary view-details" data-category="salgados">Ver Detalhes</button>
+                    </div>
+                </div>
+                <div id="product-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <h3 id="modal-title"></h3>
+                        <div id="modal-body"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="section-padded">
+            <div class="container">
+                <h2>Nossa Galeria</h2>
+                <div class="gallery">
+                    <img src="https://raw.githubusercontent.com/carlos46743/Caseiros-da-Lu/refs/heads/main/bolo%20com%20cobertura.png" alt="Bolo de chocolate decorado">
+                    <img src="https://raw.githubusercontent.com/carlos46743/Caseiros-da-Lu/refs/heads/main/doces%20variados.png" alt="Variedade de doces">
+                    <img src="https://raw.githubusercontent.com/carlos46743/Caseiros-da-Lu/refs/heads/main/salgados.png" alt="Mesa de salgados para festa">
+                    <img src="https://raw.githubusercontent.com/carlos46743/Caseiros-da-Lu/refs/heads/main/bolo%20de%20rolo.png" alt="Bolo de rolo com frutas">
+                    <img src="https://raw.githubusercontent.com/carlos46743/Caseiros-da-Lu/refs/heads/main/doces%20coloridos.png" alt="Doces coloridos em prato">
+                    <img src="https://raw.githubusercontent.com/carlos46743/Caseiros-da-Lu/refs/heads/main/bolo%20caseiro.png" alt="Bolos caseiros em exposição">
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="section-padded bg-light">
+            <div class="container">
+                <h2>O que nossos clientes dizem</h2>
+                <div class="testimonial-carousel">
+                    <div class="testimonial-item">
+                        <p>"Os bolos da Lu são maravilhosos! Sabor de casa de vó, super recomendo!"</p>
+                        <span>- Ana Paula S.</span>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"Meus convidados amaram os salgadinhos, tudo fresquinho e delicioso!"</p>
+                        <span>- João Carlos M.</span>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"Atendimento impecável e doces que são verdadeiras obras de arte. Virei cliente!"</p>
+                        <span>- Fernanda L.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section-padded">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p>Faça sua encomenda ou tire suas dúvidas. Teremos o maior prazer em atendê-lo(a)!</p>
+                <div class="contact-info">
+                    <p><i class="fab fa-whatsapp"></i> **WhatsApp:** <a href="https://wa.me/+55(11)94666-5734" target="_blank">(11)94666-5734</a></p>
+                    <p><i class="fas fa-envelope"></i> **E-mail:** <a href="mailto:SEUEMAIL@email.com">SEUEMAIL@email.com</a></p>
+                    <p><i class="fab fa-instagram"></i> **Instagram:** <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank">@SEUINSTAGRAM</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> **Localização:** Bairro/Rua da Luz, Caculé/Bahia(apenas para referência, não o endereço completo)</p>
+                </div>
+                <p class="order-note">Aceitamos encomendas para festas e eventos! Consulte nosso cardápio completo.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Caseirinhos da Lu. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/SEUFACEBOOK" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/+55(11)94666-5734?text=Olá,%20gostaria%20de%20fazer%20uma%20encomenda!" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

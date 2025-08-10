@@ -1,0 +1,462 @@
+/* Importação de fontes do Google Fonts */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Dancing Script', cursive;
+    color: #8B4513; /* Marrom escuro */
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-size: 1.8em;
+    color: #6a3411;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Cabeçalho (Hero Section) --- */
+.hero {
+    background: url('img/hero-background.jpg') no-repeat center center/cover; /* Substitua pela sua imagem de fundo */
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Escurece a imagem de fundo */
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 50%; /* Se sua logo for redonda ou quiser que seja */
+    border: 3px solid #fff;
+}
+
+.hero .subtitle {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* --- Botões --- */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.btn-primary {
+    background-color: #FF6347; /* Tomate */
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #e05c3c;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #8B4513; /* Marrom escuro */
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+.btn-secondary:hover {
+    background-color: #6a3411;
+    transform: translateY(-1px);
+}
+
+/* --- Seções Gerais --- */
+.section-padded {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: #f8f8f8;
+}
+
+/* --- Sobre Nós --- */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.about-image {
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- Produtos --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: 200px; /* Altura fixa para uniformizar */
+    object-fit: cover; /* Garante que a imagem preencha o espaço */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #FF6347;
+}
+
+/* --- Modal (Pop-up de Detalhes do Produto) --- */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica por cima de tudo */
+    z-index: 1000; /* Z-index alto para garantir que esteja no topo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita scroll se o conteúdo for muito grande */
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro semitransparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+#modal-title {
+    color: #FF6347;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 2em;
+}
+
+#modal-body p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+#modal-body ul {
+    list-style: none;
+    padding: 0;
+}
+
+#modal-body ul li {
+    background-color: #eee;
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* --- Galeria --- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Depoimentos --- */
+.testimonial-carousel {
+    display: flex;
+    overflow-x: auto; /* Para rolagem em dispositivos pequenos */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+    padding-bottom: 15px; /* Espaço para a barra de rolagem */
+}
+
+.testimonial-item {
+    flex: 0 0 350px; /* Largura fixa para cada depoimento */
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    scroll-snap-align: start;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.testimonial-item span {
+    font-weight: 600;
+    color: #8B4513;
+}
+
+/* --- Contato --- */
+.contact-info {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1em;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    color: #FF6347;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.contact-info a {
+    color: #8B4513;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #FF6347;
+}
+
+.order-note {
+    text-align: center;
+    margin-top: 30px;
+    font-style: italic;
+    color: #555;
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0 0 10px 0;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #FF6347;
+}
+
+/* --- Botão Flutuante do WhatsApp --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float i {
+    margin-top: 0;
+}
+
+
+/* --- Responsividade (Media Queries) --- */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        text-align: left;
+        gap: 50px;
+    }
+
+    .about-image {
+        flex-shrink: 0; /* Impede que a imagem encolha */
+    }
+
+    .about-content p {
+        margin: 0;
+    }
+
+    .testimonial-carousel {
+        justify-content: center; /* Centraliza os depoimentos em telas maiores */
+        overflow-x: hidden; /* Desabilita scroll se couber na tela */
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .hero {
+        padding: 60px 0;
+    }
+    .hero-logo {
+        max-width: 150px;
+    }
+    .hero .subtitle {
+        font-size: 1.2em;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    .section-padded {
+        padding: 50px 0;
+    }
+    .about-image {
+        width: 100%;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .testimonial-item {
+        flex: 0 0 90%; /* Ocupa 90% da largura em telas pequenas */
+    }
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+}
+
